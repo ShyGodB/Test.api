@@ -16,7 +16,20 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1667629878255_9405';
 
   // add your middleware config here
-  config.middleware = [];
+  // config.middleware = [ 'counter' ];
+
+  // CSRF enable false 关闭 csrf防护，使允许跨域
+  config.security = {
+    csrf: {
+      enable: false,
+    },
+  };
+
+  config.view = {
+    mapping: {
+      '.html': 'ejs',
+    },
+  };
 
   // add your user config here
   const userConfig = {
@@ -26,10 +39,10 @@ module.exports = appInfo => {
   config.cluster = {
     listen: {
       path: '',
-      port: 3001,
-      hostname: '0.0.0.0'
-    }
-  }
+      port: 7001,
+      hostname: '127.0.0.1',
+    },
+  };
 
   return {
     ...config,
