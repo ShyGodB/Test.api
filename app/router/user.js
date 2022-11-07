@@ -2,5 +2,5 @@
 
 module.exports = (app) => {
     const { router, controller } = app;
-    router.get('/getUser', controller.home.getUser);
+    router.get('/getUser', controller.user.getUser);
 }
