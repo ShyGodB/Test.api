@@ -1,4 +1,4 @@
-create table user (
+create table if not exists user (
 	id int auto_increment primary key,
 
 	nickName varchar(32) not null default '',

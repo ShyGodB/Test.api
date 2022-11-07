@@ -13,5 +13,9 @@ module.exports = {
   mysql: {
     enable: true,
     package: "egg-mysql"
+  },
+  moment: {
+    enable: true,
+    package: "egg-moment"
   }
 };

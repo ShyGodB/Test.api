@@ -51,6 +51,10 @@ module.exports = appInfo => {
     agent: false,
   }
 
+  config.moment = {
+    app: true
+  }
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
