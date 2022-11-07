@@ -14,6 +14,17 @@ class HomeController extends Controller {
     // });
     ctx.body = 'hi, egg';
   }
+
+  async getUser() {
+    const { ctx } = this;
+    const res = await ctx.service.user.getUser();
+    if (res) {
+      ctx.body = res;
+    } else {
+      ctx.body = '请求错误'
+    }
+    ctx.body = res;
+  }
 }
 
 module.exports = HomeController;

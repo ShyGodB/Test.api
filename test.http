@@ -1,7 +1,6 @@
-POST http://127.0.0.1:3001/add
+GET http://127.0.0.1:3001/getUser
 Content-Type: application/json
 
 {
-    "name", "qbfang",
-    "age": 18
+    "id": 1
 }
